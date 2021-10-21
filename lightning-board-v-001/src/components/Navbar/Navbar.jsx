@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import './Navbar.css'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 
@@ -75,14 +76,14 @@ function Navbar() {
     var _menu = []
     for (var i = 0; i < menu.length; i++){
         _menu.push(
-            <li key={menu[i].name} onMouseEnter={(e) => {
+            <div key={menu[i].name} onMouseEnter={(e) => {
                 setShowContent(true)
                 handleContent(e.target.id)
             }}>
-                <a href={menu[i].href} id={menu[i].name}>{menu[i].name}&nbsp;
+                <Link to={menu[i].href} id={menu[i].name}>{menu[i].name}&nbsp;
                     <i className='fa fa-angle-down'></i>
-                </a>
-            </li>
+                </Link >
+            </div>
         )
     }
 
@@ -91,9 +92,7 @@ function Navbar() {
             <div className='site-header'>
                 <div className='site-logo'><i className="fa fa-bolt"></i><b className='site-logo-text'>Lightning</b><span className='site-logo-text'>board</span></div>
                 <div className='site-menu'>
-                    <ul>
-                        {_menu}
-                    </ul>
+                    {_menu}
                 </div>
                 {showContent && (
                     <div className='site-menu-content' onMouseLeave={()=>setShowContent(false)}>

@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <Router>
      <Navbar/>
-    </div>
+    </Router>
   )
 }
 
