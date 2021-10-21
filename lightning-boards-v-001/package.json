@@ -1,5 +1,5 @@
 {
-  "name": "lightning-board-v-001",
+  "name": "lightning-boards-v-001",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.0",
