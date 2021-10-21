@@ -2,3 +2,22 @@
     width: 100%;
     height: fit-content;
 }
+
+.column{
+    float: left;
+    width: -webkit-fill-available;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-orange{
+    color: #F4A442;
+}
