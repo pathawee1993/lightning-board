@@ -1,7 +1,28 @@
 import React,{ useState, useEffect } from 'react'
 import './Home.css'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SlideShow from '../../components/SlideShow/SlideShow';
 
+var slideData = [
+    {
+        title: 'Digital Manufactiring',
+        src: 'https://picsum.photos/300/150',
+        caption : 'Digital Manufactiring',
+        href: ''
+    },
+    {
+        title: 'Solar Monitoring',
+        src: 'https://picsum.photos/300/150',
+        caption : 'Solar Monitoring',
+        href: ''
+    },
+    {
+        title: 'Utility Monitoring',
+        src: 'https://picsum.photos/300/150',
+        caption : 'Utility Monitoring',
+        href: ''
+    }
+]
 
 function Home(props) {
 
@@ -33,7 +54,7 @@ function Home(props) {
                     <button type="button">Request Demo</button>&nbsp;&nbsp;&nbsp;<button type="button">Learn More</button>
                 </div>
                 <div className='column' style={{width: '50%'}}>
-
+                    <SlideShow config={{data:slideData, width: '600px', height: '400px', marginTop: '50px'}}/>
                 </div>
             </div>
         </div>  

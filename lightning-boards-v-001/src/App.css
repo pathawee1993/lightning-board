@@ -21,3 +21,8 @@
 .text-orange{
     color: #F4A442;
 }
+
+body {
+    /* overflow-y: hidden; Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
