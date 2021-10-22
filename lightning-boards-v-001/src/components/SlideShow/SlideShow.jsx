@@ -60,10 +60,10 @@ function SlideShow(props) {
 
     return (
         <div style={{marginTop: props.config.marginTop, marginBottom: props.config.marginTop, height: 'auto'}}>
-            <div className="slideshow-container" style={{width:props.config.width}}>
+            <div className="slideshow-container" style={{width:props.config.width, position: 'relative'}}>
                 {slides}
-                <a className="prev text-center" onClick={()=>plusSlides(-1)} style={{top: String(Number(props.config.height.split('px')[0])*0.38)+'px',marginTop: String(Number(props.config.marginTop.split('px')[0])*2)+'px'}}>&#10094;</a>
-                <a className="next text-center" onClick={()=>plusSlides(1)} style={{top: String(Number(props.config.height.split('px')[0])*0.38)+'px',marginTop: String(Number(props.config.marginTop.split('px')[0])*2)+'px', marginLeft: String(Number(props.config.width.split('px')[0]) - 57)+'px'}}>&#10095;</a>
+                <a className="prev text-center" onClick={()=>plusSlides(-1)} style={{top: '20%',marginTop: String(Number(props.config.marginTop.split('px')[0])*2)+'px'}}>&#10094;</a>
+                <a className="next text-center" onClick={()=>plusSlides(1)} style={{top: '20%',marginTop: String(Number(props.config.marginTop.split('px')[0])*2)+'px', marginLeft: String(Number(props.config.width.split('px')[0]) - 57)+'px'}}>&#10095;</a>
             </div>
             <br/>
             <br/>
