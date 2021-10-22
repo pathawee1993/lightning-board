@@ -29,8 +29,10 @@ function SlideShow(props) {
         var data = props.config.data[i];
         slides.push(
             (slideIndex == i && <div className={"text-center " +animation} key={i}>
-                <h2>{data.title}</h2>
-                <img src={data.src} style={{width:'auto', height: String(Number(props.config.height.split('px')[0])*0.6)+'px'}} className='self-center'/>
+                <h3>{data.title}</h3>
+                <div className='sildeshow-border ' style={{height: 'auto'}}>
+                <img src={data.src} style={{width:String(Number(props.config.width.split('px')[0]) - 80)+'px', maxHeight: String(Number(props.config.height.split('px')[0]) - 80)+'px', height: 'auto'}} className='self-center'/>
+                </div>
                 <br/>
                 <br/>
                 <span>{data.caption}</span>
@@ -38,11 +40,36 @@ function SlideShow(props) {
         )
     }
 
+
+    function currentSlide(e) {
+        setSlideIndex(Number(e.target.id.split('slideshow-')[1]));
+    }
+
+    var dots = [];
+    for (var i = 0; i < props.config.data.length; i++){
+        if (i != slideIndex){
+            dots.push(
+                <span className="dot" key={i} id={'slideshow-'+i} onClick={(e)=>currentSlide(e)}></span>
+            )
+        }else{
+            dots.push(
+                <span className="dot dot-active" key={i} id={'slideshow-'+i} onClick={(e)=>currentSlide(e)}></span>
+            )
+        }
+    }
+
     return (
-        <div className="slideshow-container" style={{width:props.config.width, height: props.config.height, marginTop: props.config.marginTop }}>
-            {slides}
-            <a className="prev text-center" onClick={()=>plusSlides(-1)} style={{top: String(Number(props.config.height.split('px')[0])*0.5)+'px',marginTop: props.config.marginTop}}>&#10094;</a>
-            <a className="next text-center" onClick={()=>plusSlides(1)} style={{top: String(Number(props.config.height.split('px')[0])*0.5)+'px',marginTop: props.config.marginTop, marginLeft: String(Number(props.config.width.split('px')[0]) - 50)+'px'}}>&#10095;</a>
+        <div style={{marginTop: props.config.marginTop, marginBottom: props.config.marginTop, height: 'auto'}}>
+            <div className="slideshow-container" style={{width:props.config.width}}>
+                {slides}
+                <a className="prev text-center" onClick={()=>plusSlides(-1)} style={{top: String(Number(props.config.height.split('px')[0])*0.5)+'px',marginTop: String(Number(props.config.marginTop.split('px')[0])*2)+'px'}}>&#10094;</a>
+                <a className="next text-center" onClick={()=>plusSlides(1)} style={{top: String(Number(props.config.height.split('px')[0])*0.5)+'px',marginTop: String(Number(props.config.marginTop.split('px')[0])*2)+'px', marginLeft: String(Number(props.config.width.split('px')[0]) - 57)+'px'}}>&#10095;</a>
+            </div>
+            <br/>
+            <br/>
+            <div style={{textAlign:'center'}}>
+                {dots}
+            </div>
         </div>
     )
 }
