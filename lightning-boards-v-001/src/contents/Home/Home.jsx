@@ -25,6 +25,26 @@ var slideData = [
 ]
 
 function Home(props) {
+    const [dimensions, setDimensions] = useState({ 
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
+
+    useEffect(() => {
+
+        window.addEventListener('resize', handleResize)
+    
+        return _ => {
+          window.removeEventListener('resize', handleResize)
+        }
+    })
+
+    function handleResize() {
+        setDimensions({
+          height: window.innerHeight,
+          width: window.innerWidth
+        })
+    }
 
     return (
         <div className='home'>
@@ -54,7 +74,7 @@ function Home(props) {
                     <button type="button">Request Demo</button>&nbsp;&nbsp;&nbsp;<button type="button">Learn More</button>
                 </div>
                 <div className='column' style={{width: '50%'}}>
-                    <SlideShow config={{data:slideData, width: '600px', height: '400px', marginTop: '50px'}}/>
+                    <SlideShow config={{data:slideData, width: dimensions.width/3+'px', height: dimensions.width/3.3+'px', marginTop: '50px'}}/>
                 </div>
             </div>
         </div>  
