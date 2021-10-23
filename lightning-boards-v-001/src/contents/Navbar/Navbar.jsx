@@ -91,7 +91,8 @@ function Navbar() {
                     setShowContent(true)
                     for (var j = 0; j < content.length; j++){
                         _cards.push(
-                            <div style={{width: dimensions.width/content.length}} className='column' key={menu[i].content[j].title}>
+                            // -80 for avoid scroll bar
+                            <div style={{width: (dimensions.width-80)/content.length}} className='column' key={menu[i].content[j].title}>
                                 <Card data={menu[i].content[j]}/>
                             </div>
                         )
@@ -139,7 +140,7 @@ function Navbar() {
                 {showContent && (
                     <div className='site-menu-content' onMouseLeave={()=>setShowContent(false)}>
                         <div className='row'>
-                            <div className='column'>
+                            <div className='column' style={{marginLeft: '20px',marginRight: '20px'}}>
                                 {cards}
                             </div>
                         </div>
