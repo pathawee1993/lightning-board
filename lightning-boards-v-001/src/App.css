@@ -26,3 +26,9 @@ body {
     /* overflow-y: hidden; Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
