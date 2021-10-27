@@ -1,32 +1,32 @@
 import React,{ useState, useEffect } from 'react'
 import SlideShow from '../../../components/SlideShow/SlideShow'
 
-function HomeContent2(props) {
+function HomeContent2Mobile(props) {
     return(
         <div>
-            <div className='row content2'>
-                <div className='column text-center' style={{maxWidth: '60%', marginLeft:'auto', marginRight: 'auto', display:'block'}}>
+            <div className='row content2 justify-center'>
+                <div className='column text-center' style={{maxWidth: '80%', marginLeft:'auto', marginRight: 'auto', display:'block'}}>
                     <br/>
                     <br/>
                     <br/>
                     <h2>Increase Operational Success Across Your Entire Enterprise</h2>
-                    <div style={{width: '300px', borderTop: '3px solid #F4A442',marginLeft:'auto', marginRight: 'auto', display:'block', marginTop: '50px'}}>
+                    <div style={{width: '80%', borderTop: '3px solid #F4A442',marginLeft:'auto', marginRight: 'auto', display:'block', margin: '50px'}}>
 
                     </div>
-                    <br/>
-                    <br/>
                     For almost 20 years, Lightningboards has been the authoritative source helping management increase operational performance enterprise-wide. Our umbrella platform allows you to manage and measure all of your technology and team members proactively in real time.
                 </div>
             </div>
-            <div className='row content2 justify-center' style={{padding: '50px'}}>
-                <div className='column text-center' style={{maxWidth: '30%', display: 'block', marginTop: 'auto', marginBottom: 'auto', height: '200px', borderRight: '3px solid #F4A442'}}>
-                    <div style={{height: '200px', paddingRight: '50px'}} className='justify-center'>
-                        <h4>More than a software. We are an Operational Performance Improvement Platform That Helps You Turn Data Into Actionable Success Decisions</h4>
+            <div className='row content2 justify-center'>
+                <div className='column text-center' style={{width: '80%', display: 'block', marginTop: 'auto', marginBottom: 'auto', height: 'auto'}}>
+                    <h4>More than a software. We are an Operational Performance Improvement Platform That Helps You Turn Data Into Actionable Success Decisions</h4>
+                    <div style={{width: '80%', borderTop: '3px solid #F4A442',marginLeft:'auto', marginRight: 'auto', display:'block', margin: '50px'}}>
                     </div>
                 </div>
-                <div className='column' style={{maxWidth: '50%', paddingLeft: '50px'}}>
+            </div>
+            <div className='row content2 justify-center'>
+                <div className='column' style={{maxWidth: '80%'}}>
                     <div className='row'>
-                        <div className='column ' style={{width: '50px'}}>
+                        <div className='column' style={{width: '50px'}}>
                             <h2><i className="fa fa-project-diagram"></i></h2>
                         </div>
                         <div className='column' style={{maxWidth: '80%'}}>
@@ -67,4 +67,4 @@ function HomeContent2(props) {
     )
 }
 
-export default HomeContent2
+export default HomeContent2Mobile

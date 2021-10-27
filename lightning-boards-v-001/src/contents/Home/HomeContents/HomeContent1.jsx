@@ -3,10 +3,8 @@ import SlideShow from '../../../components/SlideShow/SlideShow'
 
 function HomeContent1(props) {
     return(
-        <div className='row content1'>
-            <div className='column text-center' style={{width: '50%'}}>
-                <br/>
-                <br/>
+        <div className='row content1 justify-center'>
+            <div className='column text-center' style={{width: '40%', paddingBottom: '50px'}}>
                 <h1>Helping <i className='text-orange'>You</i> Make
                 <br/>
                 Better Decisions
@@ -18,7 +16,7 @@ function HomeContent1(props) {
                 <span>Lightningboards connects all your technology applications under one umbrella platform to deliver instant insights</span>
                 <br/>
                 <br/>
-                <span>__________________________</span>
+                <div style={{width: '50%', borderTop: '3px solid #F4A442',marginLeft:'auto', marginRight: 'auto', display:'block', marginTop: '50px'}}/>
                 <br/>
                 <br/>
                 <br/>
@@ -26,9 +24,9 @@ function HomeContent1(props) {
                 <br/>
                 <br/>
                 <br/>
-                <button type="button">Request Demo</button>&nbsp;&nbsp;&nbsp;<button type="button">Learn More</button>
+                <button className='home-btn' type="button">REQUEST DEMO</button><button className='home-btn' type="button">LEARN MORE</button>
             </div>
-            <div className='column' style={{width: '50%'}}>
+            <div className='column' style={{width: '40%'}}>
                 <SlideShow config={{data:props.slideData, width: props.dimensions.width/3+'px', height: props.dimensions.width/3.3+'px', marginTop: '50px'}}/>
             </div>
         </div>

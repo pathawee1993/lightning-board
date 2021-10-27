@@ -5,6 +5,7 @@ import SlideShow from '../../components/SlideShow/SlideShow';
 import HomeContent1 from './HomeContents/HomeContent1';
 import HomeContent1Mobile from './HomeContents/HomeContent1Mobile';
 import HomeContent2 from './HomeContents/HomeContent2';
+import HomeContent2Mobile from './HomeContents/HomeContent2Mobile';
 
 
 var slideData = [
@@ -61,6 +62,7 @@ function Home(props) {
         return (
             <div className='home'>
                 <HomeContent1Mobile dimensions={dimensions} slideData={slideData}/>
+                <HomeContent2Mobile/>
             </div>  
         )
     }

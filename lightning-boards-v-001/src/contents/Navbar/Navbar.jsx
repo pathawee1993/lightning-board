@@ -133,7 +133,8 @@ function Navbar() {
     if (dimensions.width > 760){
         return (
             <div className='site-header'>
-                <div className='site-logo'><i className="fa fa-bolt"></i><b className='site-logo-text'>Lightning</b><span className='site-logo-text'>boards</span></div>
+                <div className='site-logo'><Link to='/'><i className="fa fa-bolt"></i><b className='site-logo-text'>Lightning</b><span className='site-logo-text'>boards</span></Link></div>
+                
                 <div className='site-menu'>
                     {_menu}
                 </div>
