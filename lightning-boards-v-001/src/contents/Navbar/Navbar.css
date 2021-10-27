@@ -82,3 +82,13 @@ align-items: center;
     border-top: 1px solid #888888;
     border-bottom: 1px solid #eeeeee;
 }
+
+.site-menu-content-mobile {
+    /* height: 100%; */
+    background-color: #ffffff;
+    border-top: 1px solid #888888;
+    border-bottom: 1px solid #eeeeee;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+}
