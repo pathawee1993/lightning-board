@@ -61,7 +61,7 @@ width: 120px;
 height: inherit;
 }
 
-.site-menu div a {
+.site-menu div a{
 color: #333333;
 text-align: center;
 height: inherit;
@@ -91,4 +91,9 @@ align-items: center;
     width: 50%;
     position: absolute;
     right: 0px;
+}
+
+.none-deco {
+    text-decoration: none;
+    color: inherit;
 }

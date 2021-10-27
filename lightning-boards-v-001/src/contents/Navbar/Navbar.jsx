@@ -16,19 +16,19 @@ const myMenu = [
                 image: '',
                 title: 'menu1-1',
                 detail: 'asdasd',
-                href: ''
+                href: '/solutions/menu1-1'
             },
             {
                 image: '',
                 title: 'menu1-2',
                 detail: 'asdasd',
-                href: ''
+                href: '/solutions/menu1-2'
             },
             {
                 image: '',
                 title: 'menu1-3',
                 detail: 'asdasd',
-                href: ''
+                href: '/solutions/menu1-3'
             }
         ]
     },
